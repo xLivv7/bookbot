@@ -14,6 +14,7 @@ def alph_for_raport(chars_dict):
     for key,value in chars_dict.items():
         if key.isalpha()==True:
             alphabet.append({"letter": key, "count": value})
+    alphabet.sort(reverse=True, key=sort_on)
     for dict in alphabet:
         print(f"letter '{dict['letter']}' was found {dict['count']} times in text")
     return alphabet
@@ -21,7 +22,7 @@ def alph_for_raport(chars_dict):
 
         
 def sort_on(dict):
-    return dict["num"]
+    return dict["count"]
 
 
     
